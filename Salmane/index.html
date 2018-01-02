@@ -1,0 +1,88 @@
+<!--/*******************************************************************************************************************************************
+File Name        :   HTML file for ata visualisation project @ EPFL.  
+Supervised By    : 	 Dr. Benzi Kirell
+Project Title    : 	 Cool Patent
+Git Hub Repo     : 	 https://github.com/bilguunchinzorigEPFL/dataVisualization
+MapData set From : 	 http://www.naturalearthdata.com/downloads/50m-cultural-vectors/
+Patent Data set  :   http://www.nber.org/patents/
+**********************************************************************************************************************************************/-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<!-- *******************************************
+
+ 		Lets define the HTML Tag
+
+ ************************************************ -->
+
+<html lang="en"><!-- HTML section starts here   -->
+
+	<!-- *******************************************
+
+ 		Lets Define THe   Head of the HTML file
+
+
+    ************************************************ -->
+
+  <head>  <!-- The  start of the "head section/tag" of the HTML file  -->
+  	 <!-- set the html char set and compatibility parameters.   -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <!-- This is the title of the visualisation   -->
+    <title>The cool  Patent</title>
+    <!-- add the css styling file  -->
+    <link href="geostyle.css" media="screen" rel="stylesheet" type="text/css"/></link>
+	<!-- **************************************
+	load the required javascript libraries. 
+			1) D3JS
+			2) D3JS  projection
+			3) D3JS topojson
+	*******************************************-->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script  src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script   src="https://d3js.org/topojson.v1.min.js"></script>
+  </head> <!-- The end of the  head sectin/tag of the HTML file  -->
+
+ <!-- *******************************************
+
+ 	Lets Define THe   Body  of the HTML file
+
+
+  *************************************** -->
+  <body class = "body"><!-- The  start of the "head section/tag" of the HTML file  -->
+   <section class="main-content">
+    <h1>Country's Patent Citation Relationship</h1>
+    <select id="categories" style="float:right; height:30px; width:300px" class="styled-select blue semi-square">
+        <option value="1" selected="selected">Chemical</option>
+        <option value="2" selected="selected">Computer&Comm</option>
+        <option value="3" selected="selected">Drugs&Medics</option>
+        <option value="4" selected="selected">Electrical</option>
+        <option value="5" selected="selected">Mechanical</option>
+        <option value="6" selected="selected">Others</option>
+    </select>
+    <div class="slidecontainer">
+        <span id="min-time">1975</span>
+        <input type="range" class="slider" name="points" min="1975" max="1999" step="1" value="0" id="slider-time">
+        <span id="max-time">1999</span>
+    </div>
+  </section>
+   
+  	<!-- The  is the heading title for the body of the HTML  -->
+	<!--span class="title"> The Cool Patents </span>
+
+
+    <!-- Define a div with id chart. This will be used to hold the map -->
+    <div id="chart">
+
+    </div>
+
+    <!-- **************************************
+	load the required javascript 
+			1) geo.js
+	*******************************************-->
+   <script src="geo-test.js" type="text/javascript"></script>
+
+      
+    </body><!-- The end of the  body sectin/tag of the HTML file  -->
+
+  </html><!-- HTML tag closed here   -->

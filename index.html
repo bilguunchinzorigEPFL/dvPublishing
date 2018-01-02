@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href="main.css" media="screen" rel="stylesheet" type="text/css"/></link>
+    <!-- This is the h2 of the visualisation   -->
+    <title>The cool Patents</title>
+</head>
+<body>
+    <h1 class="header">The Cool Patents</h1>
+    <div class="body">
+        <div class="item one" onclick="goto(0)">
+            <h2>Relationship between academic and economical impact of patents</h2>
+        </div>
+        <div class="item two" onclick="goto(1)">
+            <h2>Country's Patents Citation Relationship</h2>
+        </div>
+        <div class="item three" onclick="goto(2)">
+            <h2>Country with most patents: Ranked according to Originality of patents</h2>
+        </div>
+        <div class="footer">
+            Welcom to cool patent<br><br>
+            This is the data our visualisation course's project page, where you can select above buttons to see 3 visualisation pages of us.
+            You can get detailed information related to how we processed, analysed and created this visualisationi on our reports<br>
+            <br><br>Creators: Lukman Olagoke Olabisi, Bilguun Chinzorig, Selmane Kechkar
+        </div>
+    </div>
+</body>
+<script>
+    links=["Bilguun\\","Salmane\\","Lukman\\"]
+    function goto(i){
+        window.location.href = links[i]+'index.html'
+    }
+</script>
